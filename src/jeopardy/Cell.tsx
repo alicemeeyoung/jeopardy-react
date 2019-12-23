@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import Card from '@material-ui/core/Card';
 import { useStyles } from '../styles/board';
-import { TYPE_KEYS, GAME_SCREEN } from './types';
+import { TYPE_KEYS } from './types';
 import { useStateValue } from './Redux';
 const Cell = ({
   points,
@@ -13,15 +13,14 @@ const Cell = ({
   hasBeenSelected: boolean;
 }) => {
   const classes = useStyles();
-  const [{ question }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   const selectCell = useCallback((event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     dispatch({ type: TYPE_KEYS.SELECT_CELL, points, category });
-    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.QUESTION_PAGE });
   }, []);
 
   return (
-    <Card onClick={selectCell} className={classes.card}>
+    <Card className={classes.card} onClick={selectCell}>
       {hasBeenSelected ? ' ' : `$${points}`}
     </Card>
   );

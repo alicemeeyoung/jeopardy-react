@@ -23,7 +23,8 @@ export function ScoreboardUser(props: ScoreboardProps) {
   const { user } = props;
   const [wager, changeWager] = React.useState();
   const [{ question, mode }, dispatch] = useStateValue();
-  const points = question ? question.points : 0;
+  const questionPoints = question ? question.points : 0;
+  const points = question?.isDailyDouble ? questionPoints * 2 : questionPoints;
   const onChange = React.useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
       ev.preventDefault();
@@ -38,21 +39,21 @@ export function ScoreboardUser(props: ScoreboardProps) {
       dispatch({ type: TYPE_KEYS.ADD_POINTS, userName: user.name, points });
       dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.BOARD_PAGE });
     },
-    [user, points],
+    [user.name, points, dispatch],
   );
   const subtractPoints = React.useCallback(
     (ev: React.MouseEvent<HTMLElement>) => {
       ev.preventDefault();
       dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
     },
-    [user, points],
+    [user.name, points, dispatch],
   );
   const announceWinner = React.useCallback(
     (ev: React.MouseEvent<HTMLElement>) => {
       ev.preventDefault();
       dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.WINNER });
     },
-    [user, points],
+    [dispatch],
   );
   return (
     <Centered>

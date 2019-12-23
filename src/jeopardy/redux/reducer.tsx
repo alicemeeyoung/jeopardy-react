@@ -14,25 +14,31 @@ export function reducer(state: StateType, action: ActionTypes) {
         if (userIndex || userIndex === 0) {
           draft.users[userIndex].score -= points;
         }
+
         return;
       }
+
       case TYPE_KEYS.ADD_POINTS: {
         const { userName, points } = action;
         const userIndex = draft.users.findIndex(user => user.name === userName);
         if (userIndex || userIndex === 0) {
           draft.users[userIndex].score += points;
         }
+
         return;
       }
+
       case TYPE_KEYS.SWITCH_VIEW: {
-        const { view, question } = action;
+        const { view } = action;
         if (view in GAME_SCREEN) {
           draft.mode = view;
         } else {
           draft.mode = GAME_SCREEN.BOARD_PAGE;
         }
+
         return;
       }
+
       case TYPE_KEYS.SELECT_CELL: {
         const { category, points }: { category: string; points: number } = action;
         const { questions } = state;
@@ -43,8 +49,15 @@ export function reducer(state: StateType, action: ActionTypes) {
         const question = draft.questions[categoryIndex].categoryInfo[cellIndex];
         question.hasBeenSelected = true;
         draft.question = question;
+        if (question.isDailyDouble) {
+          draft.mode = GAME_SCREEN.DAILY_DOUBLE_LANDING;
+        } else {
+          draft.mode = GAME_SCREEN.QUESTION_PAGE;
+        }
+
         return;
       }
+
       default:
         return state;
     }

@@ -25,7 +25,7 @@ const falseApi = [
       {
         points: 400,
         value: 'I am cat 1 value 4',
-        isDailyDouble: false,
+        isDailyDouble: true,
         hasBeenSelected: false,
       },
       {
