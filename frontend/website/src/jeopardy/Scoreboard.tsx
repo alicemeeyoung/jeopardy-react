@@ -14,10 +14,7 @@ export function Scoreboard() {
   const [{ users }] = useStateValue();
   return (
     <ScoreboardRow>
-      {users &&
-        users.map(user => (
-          <ScoreboardUser key={user.name} user={user} mode={GAME_SCREEN.FINAL_JEOPARDY} />
-        ))}
+      {users && users.map(user => <ScoreboardUser key={user.name} user={user} />)}
     </ScoreboardRow>
   );
 }

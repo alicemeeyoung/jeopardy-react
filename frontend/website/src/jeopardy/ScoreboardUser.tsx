@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import { useStateValue } from './Redux';
 import { TYPE_KEYS } from './types';
 
-type ScoreboardProps = { user: User; mode: string };
+type ScoreboardProps = { user: User };
 
 const Centered = styled.div`
   text-align: center;
