@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import GameAPI from './GameAPI.json';
+import Cell from './Cell';
+import Column from './Column';
+
 
 const Board = () => {
-  const [ gameAPI, setGameAPI ] = useState([]);
-
-  useEffect(() => {
-    async function fetchIt() {
-      try {
-        console.log('hello');
-        const api = await fetch('GameAPI.json');
-        const apiJSON = await api.json();
-        setGameAPI(apiJSON);
-      } catch (error) {
-        console.log('An error has occurred on fetching');
-      }
-    }
-    fetchIt();
-
-    console.log(gameAPI);
-  }, []);
-
-  return <div>HALLOW WORLD</div>;
+  console.log(GameAPI);
+  // For each game API show a column
+  return GameAPI.map((category: GameQuestion[], index: number) => {
+    const categoryName = Object.keys(category);
+    return <Cell value={categoryName[0]} />;
+  });
 };
 
 export default Board;

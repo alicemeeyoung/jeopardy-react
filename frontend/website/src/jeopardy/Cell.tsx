@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Cell = () => {
-  return <div>Hi I'm a cell</div>;
+const Cell = ({ value }: { value: string }) => {
+  return <div>{value}</div>;
 };
 
 export default Cell;
