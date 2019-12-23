@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { User, GAME_SCREEN } from './types';
 import { ScoreboardUser } from './ScoreboardUser';
-import { useStateValue } from './Redux';
+import { useStateValue } from '../../Redux';
 
 const ScoreboardRow = styled.div`
   display: flex;
