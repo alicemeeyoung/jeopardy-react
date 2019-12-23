@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import _clone from 'lodash/clone';
-import GameAPI from './GameAPI.json';
+import GameAPI from './GameAPI.js';
 import { User, GAME_SCREEN, StateType, ActionTypes } from './types';
 import { reducer } from './redux/reducer';
 
