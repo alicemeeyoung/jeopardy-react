@@ -43,7 +43,7 @@ export function ScoreboardUser(props: ScoreboardProps) {
         dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.BOARD_PAGE });
       }
     },
-    [user.name, points, dispatch],
+    [mode, user.name, points, dispatch, wager],
   );
   const subtractPoints = React.useCallback(
     (ev: React.MouseEvent<HTMLElement>) => {
@@ -55,7 +55,7 @@ export function ScoreboardUser(props: ScoreboardProps) {
         dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
       }
     },
-    [user.name, points, dispatch],
+    [mode, user.name, points, dispatch, wager],
   );
 
   return (
