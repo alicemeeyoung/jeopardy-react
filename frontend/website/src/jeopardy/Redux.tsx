@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import { StateType, ActionTypes } from './types';
 import { reducer } from './redux/reducer';
-import { User } from './types';
+import { User, GAME_SCREEN } from './types';
 
 export type JeopardyReducer = [StateType, React.Dispatch<ActionTypes>];
 const users: User[] = [
@@ -15,7 +15,7 @@ const demoQuestion = {
   points: 300,
 };
 
-const initialState = { question: demoQuestion, users };
+const initialState: StateType = { question: demoQuestion, users, mode: GAME_SCREEN.QUESTION_PAGE };
 
 // @ts-ignore: An argument for 'defaultValue' was not provided.
 export const StateContext = createContext<JeopardyReducer>();

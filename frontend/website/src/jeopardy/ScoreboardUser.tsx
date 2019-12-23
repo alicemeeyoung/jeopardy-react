@@ -15,13 +15,15 @@ const Centered = styled.div`
 `;
 
 const ScoreText = styled.div`
-  font-size: 30px;
+  font-size: 32px;
+  padding: 16px;
 `;
 
 export function ScoreboardUser(props: ScoreboardProps) {
-  const { user, mode } = props;
+  const { user } = props;
   const [wager, changeWager] = React.useState();
-  const [{ question }, dispatch] = useStateValue();
+  const [{ question, mode }, dispatch] = useStateValue();
+  console.log({ mode }, mode === GAME_SCREEN.QUESTION_PAGE);
   const points = question ? question.points : null;
   const onChange = React.useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,17 +47,16 @@ export function ScoreboardUser(props: ScoreboardProps) {
         <div>{user.name}</div>
         <ScoreText>{user.score}</ScoreText>
       </div>
-      {mode === GAME_SCREEN.QUESTION_PAGE ||
-        (mode === GAME_SCREEN.FINAL_JEOPARDY && (
-          <div>
-            <IconButton aria-label="add" onClick={addPoints}>
-              <AddIcon />
-            </IconButton>
-            <IconButton aria-label="delete" onClick={subtractPoints}>
-              <RemoveIcon />
-            </IconButton>
-          </div>
-        ))}
+      {(mode === GAME_SCREEN.QUESTION_PAGE || mode === GAME_SCREEN.FINAL_JEOPARDY) && (
+        <div>
+          <IconButton aria-label="add" onClick={addPoints}>
+            <AddIcon />
+          </IconButton>
+          <IconButton aria-label="delete" onClick={subtractPoints}>
+            <RemoveIcon />
+          </IconButton>
+        </div>
+      )}
       {mode === GAME_SCREEN.FINAL_JEOPARDY && (
         <TextField id="outlined-basic" label="Wager" variant="outlined" onChange={onChange} />
       )}

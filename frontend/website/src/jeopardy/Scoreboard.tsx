@@ -6,11 +6,12 @@ import { useStateValue } from './Redux';
 
 const ScoreboardRow = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding: 64px;
 `;
 
 export function Scoreboard() {
   const [{ users }] = useStateValue();
-  console.log({ users });
   return (
     <ScoreboardRow>
       {users &&
