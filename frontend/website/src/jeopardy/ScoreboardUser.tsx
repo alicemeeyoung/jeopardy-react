@@ -10,19 +10,15 @@ import { TYPE_KEYS } from './types';
 
 type ScoreboardProps = { user: User; mode: string };
 
-export function ScoreboardUser({ user, mode }: ScoreboardProps) {
+export function ScoreboardUser(props: ScoreboardProps) {
+  const { user, mode } = props;
   const [wager, changeWager] = React.useState();
-  const [
-    {
-      question: { points },
-    },
-    dispatch,
-  ] = useStateValue();
+  const [{ question }, dispatch] = useStateValue();
+  const points = question ? question.points : null;
   const onChange = React.useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
       ev.preventDefault();
       const { value } = ev.target;
-      console.log({ value });
       changeWager(value);
     },
     [changeWager],
