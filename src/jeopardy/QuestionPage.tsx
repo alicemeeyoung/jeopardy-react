@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { useStateValue } from './Redux';
 
 const Text = styled.div`
-  font-size: 64px;
+  font-size: 2rem;
   text-align: center;
   padding: 64px;
 `;

@@ -9,7 +9,7 @@ export function Game() {
       <Global
         styles={css`
           html {
-            background-color: tan;
+            background-color: white;
             font: 16px Arial;
           }
         `}
