@@ -6,9 +6,9 @@ import { reducer } from './redux/reducer';
 
 export type JeopardyReducer = [StateType, React.Dispatch<ActionTypes>];
 const users: User[] = [
-  { name: 'Team A', score: 200 },
-  { name: 'Team B', score: 300 },
-  { name: 'Team C', score: 500 },
+  { name: 'Team A', score: 0 },
+  { name: 'Team B', score: 0 },
+  { name: 'Team C', score: 0 },
 ];
 
 // const demoQuestion = {
