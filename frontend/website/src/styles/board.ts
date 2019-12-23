@@ -23,5 +23,7 @@ export const useStyles = makeStyles({
     margin: '0.2rem',
     backgroundColor: 'blue',
     color: 'yellow',
+    minHeight: '3rem',
+    minWidth: '9rem',
   },
 });
