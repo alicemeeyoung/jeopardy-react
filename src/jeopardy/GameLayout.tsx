@@ -13,11 +13,10 @@ export function GameLayout() {
     <Board />
   ) : (
     <div css={{ textAlign: 'center' }}>
-    <div>
       {mode === GAME_SCREEN.DAILY_DOUBLE_LANDING && <DailyDouble />}
       {mode === GAME_SCREEN.BOARD_PAGE && <Board />}
       {mode === GAME_SCREEN.QUESTION_PAGE && <QuestionPage />}
-      {mode === GAME_SCREEN.FINAL_JEOPARDY && <JeopardyLanding />}
+      {mode === GAME_SCREEN.FINAL_JEOPARDY_LANDING && <JeopardyLanding />}
       {/* Scoreboard */}
       <Scoreboard />
     </div>

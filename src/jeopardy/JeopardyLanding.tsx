@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import finalJeopardySrc from '../content/img/finalJeopardy.jpg';
+import { useStateValue } from './Redux';
+import { TYPE_KEYS, GAME_SCREEN } from './types';
 
 const JeopardyLanding = () => {
-  return <img src={finalJeopardySrc} alt="final" width="50%" />;
+  const [, dispatch] = useStateValue();
+  const goToFinalQuestion = useCallback((event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.FINAL_JEOPARDY });
+  }, []);
+
+  return <img onClick={goToFinalQuestion} src={finalJeopardySrc} alt="final" width="50%" />;
 };
 
 export default JeopardyLanding;
