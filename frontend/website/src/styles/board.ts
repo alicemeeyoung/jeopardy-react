@@ -22,8 +22,8 @@ export const useStyles = makeStyles({
   card: {
     padding: '1rem',
     margin: '0.2rem',
-    backgroundColor: 'blue',
-    color: 'yellow',
+    backgroundColor: '#3F9FC9',
+    color: 'black',
     minHeight: '3rem',
     minWidth: '3rem',
     textAlign: 'center',
