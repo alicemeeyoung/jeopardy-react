@@ -23,7 +23,7 @@ const Board = () => {
         });
       }, 3000);
     }
-  }, [questions]);
+  }, [questions, dispatch]);
   return (
     <BoardContainer>
       {questions.map((category: GameCategory, index: number) => {
