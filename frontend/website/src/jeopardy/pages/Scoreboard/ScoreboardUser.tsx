@@ -32,19 +32,28 @@ export function ScoreboardUser(props: ScoreboardProps) {
     },
     [changeWager],
   );
-  const addPoints = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
-    ev.preventDefault();
-    dispatch({ type: TYPE_KEYS.ADD_POINTS, userName: user.name, points });
-    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.BOARD_PAGE });
-  }, []);
-  const subtractPoints = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
-    ev.preventDefault();
-    dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
-  }, []);
-  const announceWinner = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
-    ev.preventDefault();
-    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.WINNER });
-  }, []);
+  const addPoints = React.useCallback(
+    (ev: React.MouseEvent<HTMLElement>) => {
+      ev.preventDefault();
+      dispatch({ type: TYPE_KEYS.ADD_POINTS, userName: user.name, points });
+      dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.BOARD_PAGE });
+    },
+    [user, points],
+  );
+  const subtractPoints = React.useCallback(
+    (ev: React.MouseEvent<HTMLElement>) => {
+      ev.preventDefault();
+      dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
+    },
+    [user, points],
+  );
+  const announceWinner = React.useCallback(
+    (ev: React.MouseEvent<HTMLElement>) => {
+      ev.preventDefault();
+      dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.WINNER });
+    },
+    [user, points],
+  );
   return (
     <Centered>
       <div>

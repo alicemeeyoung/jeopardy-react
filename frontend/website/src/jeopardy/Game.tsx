@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Global, css } from '@emotion/core';
-import Board from './Board';
-import { Scoreboard } from './Scoreboard';
 import { StateProvider } from './Redux';
 import { GameLayout } from './GameLayout';
 
