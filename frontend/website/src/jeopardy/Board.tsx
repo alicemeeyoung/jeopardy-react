@@ -2,14 +2,17 @@ import React from 'react';
 import GameAPI from './GameAPI.json';
 import Cell from './Cell';
 import Column from './Column';
-
+import { GameQuestion } from './types';
 
 const Board = () => {
-  console.log(GameAPI);
-  // For each game API show a column
-  return GameAPI.map((category: GameQuestion[], index: number) => {
-    const categoryName = Object.keys(category);
-    return <Cell value={categoryName[0]} />;
+  return GameAPI.map((category, index: number) => {
+    const { categoryName, categoryInfo } = category;
+    return (
+      <div>
+        {/* <Cell value={} /> */}
+        {/* <Column questions={} /> */}
+      </div>
+    );
   });
 };
 
