@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { QuestionPage } from './QuestionPage';
+import JeopardyLanding from './JeopardyLanding';
 import Board from './Board';
 import { Scoreboard } from './pages/Scoreboard/Scoreboard';
 import { useStateValue } from './Redux';
@@ -10,10 +11,10 @@ export function GameLayout() {
   return mode === GAME_SCREEN.WINNER ? (
     <Board />
   ) : (
-    <div>
+    <div css={{ textAlign: 'center' }}>
       {mode === GAME_SCREEN.BOARD_PAGE && <Board />}
       {mode === GAME_SCREEN.QUESTION_PAGE && <QuestionPage />}
-      {mode === GAME_SCREEN.FINAL_JEOPARDY && <QuestionPage />}
+      {mode === GAME_SCREEN.FINAL_JEOPARDY && <JeopardyLanding />}
       {/* Scoreboard */}
       <Scoreboard />
     </div>
