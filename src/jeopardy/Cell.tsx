@@ -14,10 +14,12 @@ const Cell = ({
 }) => {
   const classes = useStyles();
   const [, dispatch] = useStateValue();
-  const selectCell = useCallback((event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault();
-    dispatch({ type: TYPE_KEYS.SELECT_CELL, points, category });
-  }, []);
+  const selectCell = hasBeenSelected
+    ? () => {}
+    : useCallback((event: React.MouseEvent<HTMLElement>) => {
+        event.preventDefault();
+        dispatch({ type: TYPE_KEYS.SELECT_CELL, points, category });
+      }, []);
 
   return (
     <Card className={classes.card} onClick={selectCell}>
