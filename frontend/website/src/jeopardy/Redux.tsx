@@ -15,7 +15,7 @@ const demoQuestion = {
   points: 300,
 };
 
-const initialState: StateType = { question: demoQuestion, users, mode: GAME_SCREEN.QUESTION_PAGE };
+const initialState: StateType = { question: demoQuestion, users, mode: GAME_SCREEN.BOARD_PAGE };
 
 // @ts-ignore: An argument for 'defaultValue' was not provided.
 export const StateContext = createContext<JeopardyReducer>();
