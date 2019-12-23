@@ -11,8 +11,8 @@ export type GameQuestion = {
 };
 
 export type GameCategory = {
-  CategoryName: string;
-  CategoryInfo: GameQuestion[];
+  categoryName: string;
+  categoryInfo: GameQuestion[];
 };
 
 export const GAME_SCREEN = {
