@@ -9,6 +9,7 @@ export const BoardContainer = styled.div`
 export const CompleteColumn = styled.div`
   display: 'flex';
   flex-flow: 'column';
+  width: 100%;
 `;
 
 export const Questions = styled.div`
@@ -25,5 +26,6 @@ export const useStyles = makeStyles({
     color: 'yellow',
     minHeight: '3rem',
     minWidth: '9rem',
+    textAlign: 'center',
   },
 });
