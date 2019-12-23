@@ -40,7 +40,9 @@ export function reducer(state: StateType, action: ActionTypes) {
         const cellIndex = questions[categoryIndex].categoryInfo.findIndex(
           question => question.points === points,
         );
-        draft.questions[categoryIndex].categoryInfo[cellIndex].hasBeenSelected = true;
+        const question = draft.questions[categoryIndex].categoryInfo[cellIndex];
+        question.hasBeenSelected = true;
+        draft.question = question;
         return;
       }
       default:
