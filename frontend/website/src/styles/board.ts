@@ -25,7 +25,8 @@ export const useStyles = makeStyles({
     backgroundColor: 'blue',
     color: 'yellow',
     minHeight: '3rem',
-    minWidth: '9rem',
+    minWidth: '3rem',
     textAlign: 'center',
+    fontSize: '1.2rem',
   },
 });
