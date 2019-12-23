@@ -11,7 +11,7 @@ const JeopardyLanding = () => {
     dispatch({
       type: TYPE_KEYS.SWITCH_VIEW,
       view: GAME_SCREEN.FINAL_JEOPARDY,
-      // question: finalJeopardy(),
+      question: finalJeopardy(),
     });
   }, []);
 
