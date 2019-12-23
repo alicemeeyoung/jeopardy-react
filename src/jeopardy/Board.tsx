@@ -18,8 +18,7 @@ const Board = () => {
         // dispatch({})
         dispatch({
           type: TYPE_KEYS.SWITCH_VIEW,
-          view: GAME_SCREEN.FINAL_JEOPARDY,
-          question: finalJeopardy(),
+          view: GAME_SCREEN.FINAL_JEOPARDY_LANDING,
         });
       }, 3000);
     }
