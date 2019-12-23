@@ -16,8 +16,12 @@ const Board = () => {
     if (isCleared) {
       setTimeout(() => {
         // dispatch({})
-        dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.FINAL_JEOPARDY });
-      }, 5000);
+        dispatch({
+          type: TYPE_KEYS.SWITCH_VIEW,
+          view: GAME_SCREEN.FINAL_JEOPARDY,
+          question: finalJeopardy(),
+        });
+      }, 3000);
     }
   }, [questions]);
   return (

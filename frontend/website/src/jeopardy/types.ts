@@ -51,6 +51,7 @@ export type GAME_SCREEN_TYPE_VALUES = GAME_SCREEN_TYPE[GAME_SCREEN_TYPE_KEYS];
 export type SWITCH_VIEW = {
   type: ACTIONS_TYPE['SWITCH_VIEW'];
   view: GAME_SCREEN_TYPE_VALUES;
+  question?: Question;
 };
 
 export type ActionTypes = ADD_POINTS | SUBTRACT_POINTS | SWITCH_VIEW | SELECT_CELL;
