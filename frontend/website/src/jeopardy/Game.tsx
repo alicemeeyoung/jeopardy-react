@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import Board from './Board';
 
 type QuestionProp = {
   value: number;
@@ -14,7 +15,7 @@ export function Game() {
   console.log('hi');
   return (
     <>
-      {/* Game */}
+      <Board />
       <div />
       <span>hello</span>
       {/* Scoreboard */}
