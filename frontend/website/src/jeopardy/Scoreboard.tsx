@@ -2,21 +2,19 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { User, GAME_SCREEN } from './types';
 import { ScoreboardUser } from './ScoreboardUser';
+import { useStateValue } from './Redux';
 
 type ScoreboardProps = { users: User[] };
 
-const usersHi: User[] = [
-  { name: 'Team A', score: 200 },
-  { name: 'Team B', score: 300 },
-  { name: 'Team C', score: 500 },
-];
-
-export function Scoreboard({ users }: ScoreboardProps) {
+export function Scoreboard() {
+  const [{ users }] = useStateValue();
+  console.log({ users });
   return (
     <>
-      {usersHi.map(user => (
-        <ScoreboardUser key={user.name} user={user} mode={GAME_SCREEN.FINAL_JEOPARDY} />
-      ))}
+      {users &&
+        users.map(user => (
+          <ScoreboardUser key={user.name} user={user} mode={GAME_SCREEN.FINAL_JEOPARDY} />
+        ))}
     </>
   );
 }

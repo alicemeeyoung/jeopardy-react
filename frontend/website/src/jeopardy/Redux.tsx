@@ -1,20 +1,35 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import { StateType, ActionTypes } from './types';
+import { reducer } from './redux/reducer';
+import { User } from './types';
+
 export type JeopardyReducer = [StateType, React.Dispatch<ActionTypes>];
+const users: User[] = [
+  { name: 'Team A', score: 200 },
+  { name: 'Team B', score: 300 },
+  { name: 'Team C', score: 500 },
+];
+
+const demoQuestion = {
+  value: 'Their favorite board game is Monopoly',
+  points: 300,
+};
+
+const initialState = { question: demoQuestion, users };
 
 // @ts-ignore: An argument for 'defaultValue' was not provided.
 export const StateContext = createContext<JeopardyReducer>();
 
 export type StateProviderProps = {
-  reducer: any;
-  initialState: any;
   children: any;
 };
 
-export const StateProvider = ({ reducer, initialState, children }: StateProviderProps) => {
-  <StateContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </StateContext.Provider>;
+export const StateProvider = ({ children }: StateProviderProps) => {
+  return (
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </StateContext.Provider>
+  );
 };
 
 export const useStateValue = () => useContext<JeopardyReducer>(StateContext);
