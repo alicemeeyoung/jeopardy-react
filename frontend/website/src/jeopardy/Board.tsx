@@ -2,16 +2,16 @@ import React from 'react';
 import GameAPI from './GameAPI.json';
 import Cell from './Cell';
 import Column from './Column';
-import { GameQuestion } from './types';
+import { GameCategory } from './types';
 
 const Board = () => {
-  return GameAPI.map((category, index: number) => {
+  return GameAPI.map((category: GameCategory, index: number) => {
     const { categoryName, categoryInfo } = category;
     return (
-      <div>
-        {/* <Cell value={} /> */}
-        {/* <Column questions={} /> */}
-      </div>
+      <React.Fragment>
+        <Cell value={categoryName} />
+        <Column questions={categoryInfo} />
+      </React.Fragment>
     );
   });
 };
