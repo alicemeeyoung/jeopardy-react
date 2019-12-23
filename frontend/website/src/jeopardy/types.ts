@@ -58,10 +58,18 @@ export type Question = {
   points: number;
   // Question
   value: string;
+  isDailyDouble: boolean;
+  hasBeenSelected: boolean;
 };
 
+export type API = {
+  categoryName: string;
+  categoryInfo: Question[];
+}[];
+
 export type StateType = {
+  questions: API;
   users: User[];
-  question: Question;
+  question: Question | null;
   mode: GAME_SCREEN_TYPE_VALUES;
 };

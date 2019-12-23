@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
+import GameAPI from './GameAPI.json';
 import { StateType, ActionTypes } from './types';
 import { reducer } from './redux/reducer';
 import { User, GAME_SCREEN } from './types';
@@ -10,12 +11,17 @@ const users: User[] = [
   { name: 'Team C', score: 500 },
 ];
 
-const demoQuestion = {
-  value: 'Their favorite board game is Monopoly',
-  points: 300,
-};
+// const demoQuestion = {
+//   value: 'Their favorite board game is Monopoly',
+//   points: 300,
+// };
 
-const initialState: StateType = { question: demoQuestion, users, mode: GAME_SCREEN.BOARD_PAGE };
+const initialState: StateType = {
+  questions: GameAPI,
+  question: null,
+  users,
+  mode: GAME_SCREEN.BOARD_PAGE,
+};
 
 // @ts-ignore: An argument for 'defaultValue' was not provided.
 export const StateContext = createContext<JeopardyReducer>();
