@@ -22,7 +22,7 @@ const Board = () => {
           <CompleteColumn>
             {/* <Cell value={categoryName} /> */}
             <CategoryCell value={categoryName} />
-            <Column questions={categoryInfo} />
+            <Column category={categoryName} questions={categoryInfo} />
           </CompleteColumn>
         );
       })}
