@@ -50,7 +50,12 @@ export type Question = {
   value: string;
 };
 
+type GAME_SCREEN_TYPE = typeof GAME_SCREEN;
+type GAME_SCREEN_TYPE_KEYS = keyof GAME_SCREEN_TYPE;
+export type GAME_SCREEN_TYPE_VALUES = GAME_SCREEN_TYPE[GAME_SCREEN_TYPE_KEYS];
+
 export type StateType = {
   users: User[];
   question: Question;
+  mode: GAME_SCREEN_TYPE_VALUES;
 };
