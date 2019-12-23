@@ -24,6 +24,7 @@ export const GAME_SCREEN = {
 export const TYPE_KEYS = {
   SUBTRACT_POINTS: 'SUBTRACT_POINTS',
   ADD_POINTS: 'ADD_POINTS',
+  SWITCH_VIEW: 'SWITCH_VIEW',
 } as const;
 
 type ACTIONS_TYPE = typeof TYPE_KEYS;
@@ -42,20 +43,33 @@ export type SUBTRACT_POINTS = {
   points: number;
 };
 
-export type ActionTypes = ADD_POINTS | SUBTRACT_POINTS;
+type GAME_SCREEN_TYPE = typeof GAME_SCREEN;
+type GAME_SCREEN_TYPE_KEYS = keyof GAME_SCREEN_TYPE;
+export type GAME_SCREEN_TYPE_VALUES = GAME_SCREEN_TYPE[GAME_SCREEN_TYPE_KEYS];
+
+export type SWITCH_VIEW = {
+  type: ACTIONS_TYPE['SWITCH_VIEW'];
+  view: GAME_SCREEN_TYPE_VALUES;
+};
+
+export type ActionTypes = ADD_POINTS | SUBTRACT_POINTS | SWITCH_VIEW;
 
 export type Question = {
   points: number;
   // Question
   value: string;
+  isDailyDouble: boolean;
+  hasBeenSelected: boolean;
 };
 
-type GAME_SCREEN_TYPE = typeof GAME_SCREEN;
-type GAME_SCREEN_TYPE_KEYS = keyof GAME_SCREEN_TYPE;
-export type GAME_SCREEN_TYPE_VALUES = GAME_SCREEN_TYPE[GAME_SCREEN_TYPE_KEYS];
+export type API = {
+  categoryName: string;
+  categoryInfo: Question[];
+}[];
 
 export type StateType = {
+  questions: API;
   users: User[];
-  question: Question;
+  question: Question | null;
   mode: GAME_SCREEN_TYPE_VALUES;
 };

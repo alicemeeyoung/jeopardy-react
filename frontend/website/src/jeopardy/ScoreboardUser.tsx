@@ -1,14 +1,13 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { User, GAME_SCREEN } from './types';
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import TextField from '@material-ui/core/TextField';
 import { useStateValue } from './Redux';
-import { TYPE_KEYS } from './types';
+import { User, GAME_SCREEN, TYPE_KEYS } from './types';
 
-type ScoreboardProps = { user: User; mode: string };
+type ScoreboardProps = { user: User };
 
 const Centered = styled.div`
   text-align: center;
@@ -24,7 +23,7 @@ export function ScoreboardUser(props: ScoreboardProps) {
   const [wager, changeWager] = React.useState();
   const [{ question, mode }, dispatch] = useStateValue();
   console.log({ mode }, mode === GAME_SCREEN.QUESTION_PAGE);
-  const points = question ? question.points : null;
+  const points = question ? question.points : 0;
   const onChange = React.useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
       ev.preventDefault();
@@ -36,6 +35,7 @@ export function ScoreboardUser(props: ScoreboardProps) {
   const addPoints = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
     ev.preventDefault();
     dispatch({ type: TYPE_KEYS.ADD_POINTS, userName: user.name, points });
+    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.BOARD_PAGE });
   }, []);
   const subtractPoints = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
     ev.preventDefault();

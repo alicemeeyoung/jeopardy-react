@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/core';
 import Board from './Board';
 import { Scoreboard } from './Scoreboard';
 import { StateProvider } from './Redux';
+import { GameLayout } from './GameLayout';
 
 export function Game() {
   return (
@@ -16,12 +17,7 @@ export function Game() {
         `}
       />
       <>
-        <Board />
-        {/* Game */}
-        <div />
-        <span>hello</span>
-        {/* Scoreboard */}
-        <Scoreboard />
+        <GameLayout />
       </>
     </StateProvider>
   );
