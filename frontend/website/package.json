@@ -6,7 +6,8 @@
   "author": "Alice",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "",
+    "build-app": "gatsby build",
     "clean": "rimraf public",
     "dev": "gatsby develop",
     "lint": "eslint src/**/**/*.tsx",
@@ -15,6 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@emotion/css": "10.0.14",
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
     "@emotion/styled-base": "10.0.14",
