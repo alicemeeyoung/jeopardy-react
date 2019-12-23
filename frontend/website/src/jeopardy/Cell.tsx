@@ -13,15 +13,15 @@ const Cell = ({
   hasBeenSelected: boolean;
 }) => {
   const classes = useStyles();
-  const [dispatch] = useStateValue();
-  const selectCell = useCallback((ev: React.MouseEvent<HTMLElement>) => {
-    ev.preventDefault();
+  const [{ question }, dispatch] = useStateValue();
+  const selectCell = useCallback((event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
     dispatch({ type: TYPE_KEYS.SELECT_CELL, points, category });
   }, []);
 
   return (
     <Card onClick={selectCell} className={classes.card}>
-      {hasBeenSelected ? '' : `${points}`}
+      {hasBeenSelected ? ' ' : `$${points}`}
     </Card>
   );
 };

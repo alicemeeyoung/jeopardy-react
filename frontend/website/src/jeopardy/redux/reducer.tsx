@@ -35,17 +35,13 @@ export function reducer(state: StateType, action: ActionTypes) {
       }
       case TYPE_KEYS.SELECT_CELL: {
         const { category, points }: { category: string; points: number } = action;
-        // search API
-        // const cellIndex = state.questions[category].findIndex(
-        //   question => question.points === points,
-        // );
-        // draft.questions[category][cellIndex].hasBeenSelected = true;
         const { questions } = state;
         const categoryIndex = questions.findIndex(question => question.categoryName === category);
         const cellIndex = questions[categoryIndex].categoryInfo.findIndex(
           question => question.points === points,
         );
         draft.questions[categoryIndex].categoryInfo[cellIndex].hasBeenSelected = true;
+        return;
       }
       default:
         return state;
