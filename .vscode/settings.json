@@ -1,0 +1,83 @@
+{
+  "javascript.validate.enable": false,
+  "editor.formatOnSave": true,
+  // ESLint by default only has “javascript” and “javascriptreact”
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "terraform.languageServer": {
+    "enabled": true
+  },
+  "typescript.tsdk": "./common/temp/node_modules/typescript/lib",
+  "files.associations": { "*.json": "jsonc" },
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "externals/**": true,
+    "**/typings/**": true,
+    ".vscode/.react/*": true,
+    "**/.cache": true,
+    "build": true
+  },
+  "files.exclude": {
+    "**/.next": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    ".jest/": true,
+    "build": true,
+    ".awcache": true,
+    "**/.rts2_cache_*": true,
+    "**/*.cjs.*": true,
+    "**/*.esm.*": true,
+    "**/*.es.*": true,
+    "**/dist/": true,
+    "**/public": true,
+    ".happypack": true
+  },
+  "cSpell.words": [
+    "grapeful",
+    "wineclub",
+    "onehope",
+    "refetch",
+    "antd",
+    "inmemory",
+    "zopfli",
+    "immer",
+    "luxon",
+    "codegen",
+    "flowtype",
+    "precommit",
+    "rushx",
+    "deduplication",
+    "fedex",
+    "shipjunction",
+    "ONEC",
+    "slsw",
+    "rushjs",
+    "prepend",
+    "lockfile",
+    "microbundle",
+    "unpkg",
+    "dynamodb",
+    "tsdx",
+    "docgen",
+    "tslib",
+    "deduplication"
+  ],
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/temp/**",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode"
+    // "**/package.json"
+  ]
+}
