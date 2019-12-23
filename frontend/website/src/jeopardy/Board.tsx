@@ -6,6 +6,7 @@ import { BoardContainer, CompleteColumn } from '../styles/board';
 import CategoryCell from './CategoryCell';
 import { isBoardCleared } from './utilities/isBoardCleared';
 import { useStateValue } from './Redux';
+import { finalJeopardy } from './utilities/finalJeopardy';
 
 const Board = () => {
   const [{ questions }, dispatch] = useStateValue();
@@ -14,6 +15,7 @@ const Board = () => {
     const isCleared = isBoardCleared(questions);
     if (isCleared) {
       setTimeout(() => {
+        // dispatch({})
         dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.FINAL_JEOPARDY });
       }, 5000);
     }

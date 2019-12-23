@@ -4,8 +4,9 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import TextField from '@material-ui/core/TextField';
-import { useStateValue } from './Redux';
-import { User, GAME_SCREEN, TYPE_KEYS } from './types';
+import Button from '@material-ui/core/Button';
+import { useStateValue } from '../../Redux';
+import { User, GAME_SCREEN, TYPE_KEYS } from '../../types';
 
 type ScoreboardProps = { user: User };
 
@@ -22,7 +23,6 @@ export function ScoreboardUser(props: ScoreboardProps) {
   const { user } = props;
   const [wager, changeWager] = React.useState();
   const [{ question, mode }, dispatch] = useStateValue();
-  console.log({ mode }, mode === GAME_SCREEN.QUESTION_PAGE);
   const points = question ? question.points : 0;
   const onChange = React.useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +40,10 @@ export function ScoreboardUser(props: ScoreboardProps) {
   const subtractPoints = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
     ev.preventDefault();
     dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
+  }, []);
+  const announceWinner = React.useCallback((ev: React.MouseEvent<HTMLElement>) => {
+    ev.preventDefault();
+    dispatch({ type: TYPE_KEYS.SWITCH_VIEW, view: GAME_SCREEN.WINNER });
   }, []);
   return (
     <Centered>
@@ -59,6 +63,11 @@ export function ScoreboardUser(props: ScoreboardProps) {
       )}
       {mode === GAME_SCREEN.FINAL_JEOPARDY && (
         <TextField id="outlined-basic" label="Wager" variant="outlined" onChange={onChange} />
+      )}
+      {mode === GAME_SCREEN.FINAL_JEOPARDY && (
+        <Button onClick={announceWinner}>
+          <div>Announce Winner</div>
+        </Button>
       )}
     </Centered>
   );

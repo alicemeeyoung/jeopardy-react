@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { QuestionPage } from './QuestionPage';
 import Board from './Board';
-import { Scoreboard } from './Scoreboard';
+import { Scoreboard } from './pages/Scoreboard/Scoreboard';
 import { useStateValue } from './Redux';
 import { GAME_SCREEN } from './types';
 
 export function GameLayout() {
   const [{ mode }] = useStateValue();
-  return (
+  return mode === GAME_SCREEN.WINNER ? (
+    <Board />
+  ) : (
     <>
       {mode === GAME_SCREEN.BOARD_PAGE && <Board />}
       {mode === GAME_SCREEN.QUESTION_PAGE && <QuestionPage />}

@@ -12,6 +12,7 @@ export const GAME_SCREEN = {
   QUESTION_PAGE: 'QUESTION_PAGE',
   BOARD_PAGE: 'BOARD_PAGE',
   FINAL_JEOPARDY: 'FINAL_JEOPARDY',
+  WINNER: 'WINNER',
 } as const;
 
 export const TYPE_KEYS = {
