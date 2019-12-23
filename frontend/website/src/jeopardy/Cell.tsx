@@ -4,7 +4,11 @@ import { useStyles } from '../styles/board';
 
 const Cell = ({ value, hasBeenSelected }: { value: string; hasBeenSelected: booleans }) => {
   const classes = useStyles();
-  return <Card className={classes.card}>{hasBeenSelected ? '' : value}</Card>;
+  return (
+    <Card onClick={() => console.log('hi')} className={classes.card}>
+      {hasBeenSelected ? '' : value}
+    </Card>
+  );
 };
 
 export default Cell;
