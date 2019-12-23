@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
+import _clone from 'lodash/clone';
 import GameAPI from './GameAPI.json';
 import { StateType, ActionTypes } from './types';
 import { reducer } from './redux/reducer';
@@ -17,7 +18,7 @@ const users: User[] = [
 // };
 
 const initialState: StateType = {
-  questions: GameAPI,
+  questions: _clone(GameAPI),
   question: null,
   users,
   mode: GAME_SCREEN.BOARD_PAGE,
