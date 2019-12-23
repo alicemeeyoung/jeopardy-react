@@ -48,6 +48,7 @@ dependencies:
   gatsby-transformer-remark: 2.6.9_gatsby@2.13.33
   gatsby-transformer-sharp: 2.2.4_72ef17faf6f1df36d8948cd19f4a4bd5
   gatsby-transformer-yaml: 2.2.3_gatsby@2.13.33
+  immer: 5.1.0
   lodash: 4.17.15
   modern-normalize: 0.5.0
   normalize.css: 8.0.1
@@ -7906,6 +7907,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-8ryJBL1CN5uSHpiBMX0rJw79C9F9aJqMnjGnrd/1CafegpNuA81RBAAru/jQQEOWlOJJlpRnlcVFF6wq+Ist0A==
+  /immer/5.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-t6gyFtTcokCuI0tX9KQZJQAkIjSqo/nTeJnwojfty69EzrorZbywwhZ8qNNlF+faajHeRnhOvM2F40KHLFCghQ==
   /immutable/3.7.6:
     dev: false
     engines:
@@ -14916,6 +14921,7 @@ packages:
       gatsby-transformer-remark: 2.6.9_gatsby@2.13.33
       gatsby-transformer-sharp: 2.2.4_72ef17faf6f1df36d8948cd19f4a4bd5
       gatsby-transformer-yaml: 2.2.3_gatsby@2.13.33
+      immer: 5.1.0
       lodash: 4.17.15
       modern-normalize: 0.5.0
       normalize.css: 8.0.1
@@ -14934,7 +14940,7 @@ packages:
     dev: false
     name: '@rush-temp/jeopardy-react-frontend'
     resolution:
-      integrity: sha512-QDlxh590PeaYjHKy9BHi7OWv42KG1gmCzkv0BCZi8+MxZxP98sgPQOSptHQcedNP1/a7Uhzo70joExF1LXLAZA==
+      integrity: sha512-npDsJGDcqcWhwy8Psu9RDIbJ3Bc4sRMvnC5b9eGfHVp2KYcR5GMTNsZ/bj745MuwDUSSvsERVRQwrocJMq6YUw==
       tarball: 'file:projects/jeopardy-react-frontend.tgz'
     version: 0.0.0
 registry: ''
@@ -14988,6 +14994,7 @@ specifiers:
   gatsby-transformer-remark: 2.6.9
   gatsby-transformer-sharp: 2.2.4
   gatsby-transformer-yaml: 2.2.3
+  immer: 5.1.0
   lodash: 4.17.15
   modern-normalize: 0.5.0
   normalize.css: 8.0.1

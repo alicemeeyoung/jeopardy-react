@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useReducer } from 'react';
+import { StateType, ActionTypes } from './types';
+export type JeopardyReducer = [StateType, React.Dispatch<ActionTypes>];
 
-export const StateContext = createContext({});
+// @ts-ignore: An argument for 'defaultValue' was not provided.
+export const StateContext = createContext<JeopardyReducer>();
 
 export type StateProviderProps = {
   reducer: any;
@@ -14,4 +17,4 @@ export const StateProvider = ({ reducer, initialState, children }: StateProvider
   </StateContext.Provider>;
 };
 
-export const useStateValue = () => useContext(StateContext);
+export const useStateValue = () => useContext<JeopardyReducer>(StateContext);

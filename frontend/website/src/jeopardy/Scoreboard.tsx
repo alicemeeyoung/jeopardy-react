@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { Game } from '../jeopardy/Game';
-import { User } from './types';
-import { ScoreboardUsers } from './';
+import { User, GAME_SCREEN } from './types';
+import { ScoreboardUser } from './ScoreboardUser';
 
 type ScoreboardProps = { users: User[] };
 
@@ -16,7 +15,7 @@ export function Scoreboard({ users }: ScoreboardProps) {
   return (
     <>
       {usersHi.map(user => (
-        <ScoreboardUsers user={user} />
+        <ScoreboardUser key={user.name} user={user} mode={GAME_SCREEN.FINAL_JEOPARDY} />
       ))}
     </>
   );
