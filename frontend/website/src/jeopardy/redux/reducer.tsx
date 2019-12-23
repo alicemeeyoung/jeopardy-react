@@ -25,7 +25,7 @@ export function reducer(state: StateType, action: ActionTypes) {
         return;
       }
       case TYPE_KEYS.SWITCH_VIEW: {
-        const { view } = action;
+        const { view, question } = action;
         if (view in GAME_SCREEN) {
           draft.mode = view;
         } else {

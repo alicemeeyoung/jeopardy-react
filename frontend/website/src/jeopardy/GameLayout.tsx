@@ -10,12 +10,12 @@ export function GameLayout() {
   return mode === GAME_SCREEN.WINNER ? (
     <Board />
   ) : (
-    <>
+    <div>
       {mode === GAME_SCREEN.BOARD_PAGE && <Board />}
       {mode === GAME_SCREEN.QUESTION_PAGE && <QuestionPage />}
       {mode === GAME_SCREEN.FINAL_JEOPARDY && <QuestionPage />}
       {/* Scoreboard */}
       <Scoreboard />
-    </>
+    </div>
   );
 }
