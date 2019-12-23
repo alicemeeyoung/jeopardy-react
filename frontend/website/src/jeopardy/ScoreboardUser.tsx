@@ -10,6 +10,14 @@ import { TYPE_KEYS } from './types';
 
 type ScoreboardProps = { user: User; mode: string };
 
+const Centered = styled.div`
+  text-align: center;
+`;
+
+const ScoreText = styled.div`
+  font-size: 30px;
+`;
+
 export function ScoreboardUser(props: ScoreboardProps) {
   const { user, mode } = props;
   const [wager, changeWager] = React.useState();
@@ -32,27 +40,25 @@ export function ScoreboardUser(props: ScoreboardProps) {
     dispatch({ type: TYPE_KEYS.SUBTRACT_POINTS, userName: user.name, points });
   }, []);
   return (
-    <>
+    <Centered>
       <div>
-        <div>
-          <div>{user.name}</div>
-          <div>{user.score}</div>
-        </div>
-        {mode === GAME_SCREEN.QUESTION_PAGE ||
-          (mode === GAME_SCREEN.FINAL_JEOPARDY && (
-            <div>
-              <IconButton aria-label="add" onClick={addPoints}>
-                <AddIcon />
-              </IconButton>
-              <IconButton aria-label="delete" onClick={subtractPoints}>
-                <RemoveIcon />
-              </IconButton>
-            </div>
-          ))}
-        {mode === GAME_SCREEN.FINAL_JEOPARDY && (
-          <TextField id="outlined-basic" label="Wager" variant="outlined" onChange={onChange} />
-        )}
+        <div>{user.name}</div>
+        <ScoreText>{user.score}</ScoreText>
       </div>
-    </>
+      {mode === GAME_SCREEN.QUESTION_PAGE ||
+        (mode === GAME_SCREEN.FINAL_JEOPARDY && (
+          <div>
+            <IconButton aria-label="add" onClick={addPoints}>
+              <AddIcon />
+            </IconButton>
+            <IconButton aria-label="delete" onClick={subtractPoints}>
+              <RemoveIcon />
+            </IconButton>
+          </div>
+        ))}
+      {mode === GAME_SCREEN.FINAL_JEOPARDY && (
+        <TextField id="outlined-basic" label="Wager" variant="outlined" onChange={onChange} />
+      )}
+    </Centered>
   );
 }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { Global, css } from '@emotion/core';
 import Board from './Board';
 import { Scoreboard } from './Scoreboard';
 import { StateProvider } from './Redux';
@@ -13,6 +14,14 @@ export function Game() {
   console.log('hi');
   return (
     <StateProvider>
+      <Global
+        styles={css`
+          html {
+            background-color: tan;
+            font: 16px Arial;
+          }
+        `}
+      />
       <>
         <Board />
         {/* Game */}
