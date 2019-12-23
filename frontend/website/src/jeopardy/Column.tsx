@@ -7,8 +7,8 @@ const Column = ({ questions }: { questions: GameQuestion[] }) => {
   return (
     <Questions>
       {questions.map((question, index) => {
-        const { value, points } = question;
-        return <Cell key={value} value={'$' + points} />;
+        const { value, points, hasBeenSelected } = question;
+        return <Cell key={value} value={'$' + points} hasBeenSelected={hasBeenSelected} />;
       })}
     </Questions>
   );

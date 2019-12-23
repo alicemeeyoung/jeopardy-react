@@ -4,6 +4,7 @@ import Cell from './Cell';
 import Column from './Column';
 import { GameCategory } from './types';
 import { BoardContainer, CompleteColumn } from '../styles/board';
+import CategoryCell from './CategoryCell';
 
 const Board = () => {
   return (
@@ -12,7 +13,8 @@ const Board = () => {
         const { categoryName, categoryInfo } = category;
         return (
           <CompleteColumn>
-            <Cell value={categoryName} />
+            {/* <Cell value={categoryName} /> */}
+            <CategoryCell value={categoryName} />
             <Column questions={categoryInfo} />
           </CompleteColumn>
         );
