@@ -2,264 +2,204 @@
   {
     "Category1": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 1 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 1 value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 1 value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 1 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 1 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   },
   {
     "Category2": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 2 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 2 value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 2 value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 2 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 2 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   },
   {
     "Category3": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 3 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 3  value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 3  value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 3 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 3 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   },
   {
     "Category4": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 4 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 4 value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 4 value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 4 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 4 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   },
   {
     "Category5": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 5 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 5 value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 5 value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 5 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 5 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   },
   {
     "Category6": [
       {
-        "Question1": {
-          "value": "I am value 1",
-          "points": 100,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 100,
+        "value": "I am cat 6 value 1",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question2": {
-          "value": "I am value.",
-          "points": 200,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 200,
+        "value": "I am cat 6 value 2",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question3": {
-          "value": "I am value 3",
-          "points": 300,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 300,
+        "value": "I am cat 6 value 3",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       },
       {
-        "Question4": {
-          "value": "I am value 4",
-          "points": 400,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
-      },
+        "points": 400,
+        "value": "I am cat 6 value 4",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
+      },      
       {
-        "Question5": {
-          "value": "I am value 5",
-          "points": 500,
-          "isDailyDouble": false,
-          "hasBeenSelected": false
-        }
+        "points": 500,
+        "value": "I am cat 6 value 5",
+        "isDailyDouble": false,
+        "hasBeenSelected": false
       }
     ]
   }
