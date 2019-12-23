@@ -3,16 +3,9 @@ export type User = {
   score: number;
 };
 
-export type GameQuestion = {
-  points: number;
-  value: string;
-  isDailyDouble: boolean;
-  hasBeenSelected: boolean;
-};
-
 export type GameCategory = {
   categoryName: string;
-  categoryInfo: GameQuestion[];
+  categoryInfo: Question[];
 };
 
 export const GAME_SCREEN = {
@@ -25,11 +18,18 @@ export const TYPE_KEYS = {
   SUBTRACT_POINTS: 'SUBTRACT_POINTS',
   ADD_POINTS: 'ADD_POINTS',
   SWITCH_VIEW: 'SWITCH_VIEW',
+  SELECT_CELL: 'SELECT_CELL',
 } as const;
 
 type ACTIONS_TYPE = typeof TYPE_KEYS;
 type ACTIONS_KEYS = keyof ACTIONS_TYPE;
 export type ACTIONS_VALUES = ACTIONS_TYPE[ACTIONS_KEYS];
+
+export type SELECT_CELL = {
+  type: ACTIONS_TYPE['SELECT_CELL'];
+  category: string;
+  points: number;
+};
 
 export type ADD_POINTS = {
   type: ACTIONS_TYPE['ADD_POINTS'];
@@ -52,7 +52,7 @@ export type SWITCH_VIEW = {
   view: GAME_SCREEN_TYPE_VALUES;
 };
 
-export type ActionTypes = ADD_POINTS | SUBTRACT_POINTS | SWITCH_VIEW;
+export type ActionTypes = ADD_POINTS | SUBTRACT_POINTS | SWITCH_VIEW | SELECT_CELL;
 
 export type Question = {
   points: number;

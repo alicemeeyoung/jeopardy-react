@@ -1,9 +1,9 @@
 import React from 'react';
 import Cell from './Cell';
-import { GameQuestion } from './types';
+import { Question } from './types';
 import { Questions } from '../styles/board';
 
-const Column = ({ questions }: { questions: GameQuestion[] }) => {
+const Column = ({ questions }: { questions: Question[] }) => {
   return (
     <Questions>
       {questions.map((question, index) => {
