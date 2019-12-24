@@ -30,7 +30,7 @@ module.exports = [
       {
         points: 500,
         value:
-          'A Gen Z subculture that is characterized by the following fashion choices: ' +
+          'A Gen Z term for a female that is characterized by the following fashion choices: ' +
           'Over sized T shirts, shorts, Birkenstocks, and scrunchies in hair and wrists.' +
           'They can also be spotted carrying hydroflasks decorated with stickers.',
         isDailyDouble: false,

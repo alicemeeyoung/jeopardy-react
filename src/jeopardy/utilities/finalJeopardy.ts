@@ -4,7 +4,8 @@ export function finalJeopardy(): Question {
   return {
     points: 0,
     // Question
-    value: 'This is a Final Jeopardy Question',
+    value:
+      'According to the FB group, the day of the week Tree Group meets under the forsaken tree.',
     isDailyDouble: false,
     hasBeenSelected: false,
   };
