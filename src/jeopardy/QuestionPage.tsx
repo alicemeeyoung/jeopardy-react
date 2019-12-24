@@ -22,7 +22,7 @@ const useQuestionCardStyles = makeStyles({
     minWidth: '3rem',
     textAlign: 'center',
     fontSize: '1.2rem',
-    height: '21rem',
+    height: '18rem',
   },
 });
 

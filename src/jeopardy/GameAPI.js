@@ -74,7 +74,7 @@ module.exports = [
           'I am the biological mother of Kiki and Toto. ' +
           'What is the name given to me by their adoptive mother? ' +
           'Hint: A medium sized wild cat with short tails and tufts of black fur on its ears. ',
-        isDailyDouble: false,
+        isDailyDouble: true,
         hasBeenSelected: false,
       },
     ],
@@ -131,7 +131,7 @@ module.exports = [
       },
       {
         points: 300,
-        value: 'I am cat 4 value 3',
+        value: 'Cheese Foams',
         isDailyDouble: false,
         hasBeenSelected: false,
       },
@@ -140,7 +140,7 @@ module.exports = [
         value:
           'Could this possibly be one of the first boba places in Garden Grove? ' +
           'This location still exists in the exact same location as it did when we were children.',
-        isDailyDouble: false,
+        isDailyDouble: true,
         hasBeenSelected: false,
       },
       {

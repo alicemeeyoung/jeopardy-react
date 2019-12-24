@@ -15,7 +15,7 @@ const JeopardyLanding = () => {
     });
   }, []);
 
-  return <img onClick={goToFinalQuestion} src={finalJeopardySrc} alt="final" width="50%" />;
+  return <img onClick={goToFinalQuestion} src={finalJeopardySrc} alt="final" width="100%" />;
 };
 
 export default JeopardyLanding;
