@@ -151,41 +151,41 @@ module.exports = [
       },
     ],
   },
-  {
-    categoryName: 'Tree',
-    categoryInfo: [
-      {
-        points: 100,
-        value: 'I am cat 5 value 1',
-        isDailyDouble: false,
-        hasBeenSelected: false,
-      },
-      {
-        points: 200,
-        value: 'I am cat 5 value 2',
-        isDailyDouble: false,
-        hasBeenSelected: false,
-      },
-      {
-        points: 300,
-        value: 'I am cat 5 value 3',
-        isDailyDouble: false,
-        hasBeenSelected: false,
-      },
-      {
-        points: 400,
-        value: 'I am cat 5 value 4',
-        isDailyDouble: false,
-        hasBeenSelected: false,
-      },
-      {
-        points: 500,
-        value: 'I am cat 5 value 5',
-        isDailyDouble: false,
-        hasBeenSelected: false,
-      },
-    ],
-  },
+  // {
+  //   categoryName: 'Tree',
+  //   categoryInfo: [
+  //     {
+  //       points: 100,
+  //       value: 'I am cat 5 value 1',
+  //       isDailyDouble: false,
+  //       hasBeenSelected: false,
+  //     },
+  //     {
+  //       points: 200,
+  //       value: 'I am cat 5 value 2',
+  //       isDailyDouble: false,
+  //       hasBeenSelected: false,
+  //     },
+  //     {
+  //       points: 300,
+  //       value: 'I am cat 5 value 3',
+  //       isDailyDouble: false,
+  //       hasBeenSelected: false,
+  //     },
+  //     {
+  //       points: 400,
+  //       value: 'I am cat 5 value 4',
+  //       isDailyDouble: false,
+  //       hasBeenSelected: false,
+  //     },
+  //     {
+  //       points: 500,
+  //       value: 'I am cat 5 value 5',
+  //       isDailyDouble: false,
+  //       hasBeenSelected: false,
+  //     },
+  //   ],
+  // },
   // {
   //   "categoryName": "Category6",
   //   "categoryInfo": [

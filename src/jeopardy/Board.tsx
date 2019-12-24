@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Cell from './Cell';
 import Column from './Column';
 import { GameCategory, TYPE_KEYS, GAME_SCREEN } from './types';
 import { BoardContainer, CompleteColumn } from '../styles/board';
 import CategoryCell from './CategoryCell';
 import { isBoardCleared } from './utilities/isBoardCleared';
 import { useStateValue } from './Redux';
-import { finalJeopardy } from './utilities/finalJeopardy';
 
 const Board = () => {
   const [{ questions }, dispatch] = useStateValue();
