@@ -1,2 +1,2 @@
 # jeopardy-react
-This is jeopardy uwu
+This is jeopardy! uwu
